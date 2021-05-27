@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="https://static.cdn.onlyfans.com/apple-touch-icon.png?rev=202104301813-271ad07a42">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://static.cdn.onlyfans.com/favicon-32x32.png?rev=202104301813-271ad07a42">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://static.cdn.onlyfans.com/favicon-16x16.png?rev=202104301813-271ad07a42">
+    <link rel="manifest" href="https://static.cdn.onlyfans.com/site.webmanifest?rev=202104301813-271ad07a42">
+    <link rel="mask-icon" href="https://static.cdn.onlyfans.com/safari-pinned-tab.svg?rev=202104301813-271ad07a42"
+        color="#00aff0">
+    <link rel="shortcut icon" href="https://static.cdn.onlyfans.com/favicon.ico?rev=202104301813-271ad07a42">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/style.css">
+    <title>OnlyPigeons</title>
+
+</head>
+
+<body>
+    {{> _header}}
+    <div class="container">
+        {{{body}}}
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script> 
+        M.Sidenav.init(document.querySelector('.sidenav'))   
+    </script>
+</body>
+
+</html>
