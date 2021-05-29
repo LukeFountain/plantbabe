@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const StorySchema = new mongoose.Schema({
+const PlantSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
@@ -25,4 +25,4 @@ const StorySchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model('stories', StorySchema)
+module.exports = mongoose.model('plantandpotdirectory', PlantSchema)

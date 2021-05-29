@@ -1,6 +1,6 @@
 <h6>this is the dashboard</h6>
 <h3>welcome {{name}}</h3>
-<p>stories</p>
+<p>Plant collections</p>
 
 {{#if stories}}
   <table class="striped">
@@ -15,7 +15,8 @@
     <tbody>
       {{#each stories}}
         <tr>
-          <td><a href="/stories/{{_id}}"></a>{{title}}</td>
+          //changed this to plants from stories
+          <td><a href="/plants/{{_id}}"></a>{{title}}</td>
           <td>{{createdAt}}</td>
           <td><span class="dash-status">{{status}}</span></td>
           <td></td>
