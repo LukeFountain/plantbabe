@@ -1,0 +1,30 @@
+{{!-- I changed this to be in the plants folder instead of layouts --}}
+
+<h1>Public Plants</h1>
+<div class="row">
+  {{#each plants}}
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          {{! to do, edit icon helper }}
+        </div>
+        <div class="card-content center-align">
+          <h5>{{title}}</h5>
+          <p>{{body}}</p>
+            <br>
+            <div class="chip">
+                <img src="{{user.image}}" alt="" srcset="">
+                <a href="/plants/user.{{user._id}}">{{user.displayName}}</a>
+            </div>
+        </div>
+        <div class="card-action center-align">
+            <a href="/plants/{{_id}}" class="btn grey">View More</a>
+        </div>
+      </div>
+    </div>
+
+  {{else}}
+    <p>No Plants to display</p>
+  {{/each}}
+
+</div>

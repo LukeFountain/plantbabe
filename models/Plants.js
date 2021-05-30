@@ -25,4 +25,4 @@ const PlantSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model('plantandpotdirectory', PlantSchema)
+module.exports = mongoose.model('plants', PlantSchema)

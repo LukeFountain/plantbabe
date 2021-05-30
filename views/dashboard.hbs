@@ -2,7 +2,7 @@
 <h3>welcome {{name}}</h3>
 <p>Plant collections</p>
 
-{{#if stories}}
+{{#if plants}}
   <table class="striped">
     <thead>
       <tr>
@@ -13,11 +13,11 @@
       </tr>
     </thead>
     <tbody>
-      {{#each stories}}
+      {{#each plants}}
         <tr>
-          //changed this to plants from stories
+          {{!-- //changed this to plants from stories --}}
           <td><a href="/plants/{{_id}}"></a>{{title}}</td>
-          <td>{{createdAt}}</td>
+          <td>{{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td>
           <td><span class="dash-status">{{status}}</span></td>
           <td></td>
         </tr>

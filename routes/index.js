@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const { ensureAuth, ensureGuest } = require("../middleware/auth")
 
-const Story = require('../models/Story')
+const Plants = require('../models/Plants')
 
 //this is the login/landing page 
 //route GET / 
@@ -17,9 +17,12 @@ router.get('/', ensureGuest, (req, res) => {
 //route GET /dashboard
 router.get('/dashboard', ensureAuth, async (req, res) => {
     try {
-        const stories = await Story.find ({ user: req.user.id }).lean()
+        // changed to plants and Plants from storys and Storys
+        const plants = await Plants.find ({ user: req.user.id }).lean()
         res.render('dashboard',{
             name: req.user.firstName,
+            plants,
+            // You will end up wanting to add pots to this too. 
         })
     } catch (err) {
 
