@@ -25,7 +25,8 @@ router.get('/dashboard', ensureAuth, async (req, res) => {
             // You will end up wanting to add pots to this too. 
         })
     } catch (err) {
-
+        console.error(err)
+        res.render('error/500')
     }
 })
 

@@ -15,11 +15,16 @@
     <tbody>
       {{#each plants}}
         <tr>
-          {{!-- //changed this to plants from stories --}}
-          <td><a href="/plants/{{_id}}"></a>{{title}}</td>
-          <td>{{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td>
+          {{! //changed this to plants from stories }}
+          <td><a href="/plants/{{_id}}">{{title}}</a></td>
+          <td>{{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</td>
           <td><span class="dash-status">{{status}}</span></td>
-          <td></td>
+          <td>
+            <a href="/plants/edit/{{_id}}" class="btin btn-float">
+              <i class="fas fas edit"></i>
+            </a>
+
+          </td>
         </tr>
       {{/each}}
     </tbody>
