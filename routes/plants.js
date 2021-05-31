@@ -140,7 +140,7 @@ router.delete("/:id", ensureAuth, async (req, res) => {
 // @route   GET /plants/user/:userId
 router.get('/user/:userId', ensureAuth, async (req, res) => {
   try {
-    const plants = await Plant.find({
+    const plants = await Plants.find({
       user: req.params.userId,
       status: 'public',
     })
