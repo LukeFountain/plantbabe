@@ -1,7 +1,9 @@
 const mongoose = require("mongoose");
 
+
+// changing this from title to plant Name 
 const PlantSchema = new mongoose.Schema({
-  title: {
+  plantName: {
     type: String,
     required: true,
     trim: true

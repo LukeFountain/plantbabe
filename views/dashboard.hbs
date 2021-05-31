@@ -6,7 +6,7 @@
   <table class="striped">
     <thead>
       <tr>
-        <th>Title</th>
+        <th>Plant Name</th>
         <th>Date</th>
         <th>Status</th>
         <th></th>
@@ -16,7 +16,7 @@
       {{#each plants}}
         <tr>
           {{! //changed this to plants from stories }}
-          <td><a href="/plants/{{_id}}">{{title}}</a></td>
+          <td><a href="/plants/{{_id}}">{{plantName}}</a></td>
           <td>{{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</td>
           <td><span class="dash-status">{{status}}</span></td>
           <td>
