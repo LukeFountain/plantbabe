@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col s12 m8">
+        <h3>{{plants.title}}
+            <small>{{{editIcon plants.user user plants._id false}}}</small>
+        </h3>
+        <div class="card plants">
+            <div class="card-content">
+                <span class="card-title">{{formatDate date 'MMMM Do YYYY, h:mm:ss a'}}</span>
+                {{{plants.body}}}
+            </div>
+        </div>
+    </div>
+    <div class="col s12 m4">
+        <div class="card center-align">
+            <div class="card-content">
+                <span class="card-title">{{plants.user.displayName}}</span>
+                <img src="{{plants.user.image}}" class="circle responsive-img img-small">
+            </div>
+            <div class="card-action">
+                <a href="/plants/user/{{plants.user._id}}">More From {{plants.user.firstName}}</a>
+            </div>
+        </div>
+    </div>
+</div>
