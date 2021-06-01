@@ -1,5 +1,6 @@
 const path = require("path");
 const express = require("express");
+const cloudinary = require('cloudinary').v2;
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const morgan = require("morgan");
@@ -9,6 +10,8 @@ const passport = require("passport");
 const session = require("express-session");
 const MongoDbStore = require("connect-mongo");
 const connectDB = require("./config/db");
+var multer  = require('multer')
+
 
 //load the confin
 

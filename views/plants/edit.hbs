@@ -1,5 +1,6 @@
 <h3>Edit a Plant</h3>
 <div class="row">
+    <img class="materialboxed responsive-img" width="200" src={{plants.imageurl}}>
     <form action="/plants/{{plants._id}}" method="POST" class="col s12">
     <input type="hidden" name="_METHOD" value="PUT">
         <div class="row">

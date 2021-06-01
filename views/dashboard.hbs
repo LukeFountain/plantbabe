@@ -1,5 +1,5 @@
-<h6>this is the dashboard</h6>
-<h3>welcome {{name}}</h3>
+<h6></h6>
+<h3>Welcome {{name}}</h3>
 <p>Plant collections</p>
 
 {{#if plants}}
@@ -15,8 +15,8 @@
     <tbody>
       {{#each plants}}
         <tr>
-          {{! //changed this to plants from stories }}
           <td><a href="/plants/{{_id}}">{{plantName}}</a></td>
+          <td><img class="materialboxed responsive-img circle" width="75" src={{imageurl}}></td>
           <td>{{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</td>
           <td><span class="dash-status">{{status}}</span></td>
           <td>

@@ -10,6 +10,7 @@
   "author": "Luke Fountain",
   "license": "ISC",
   "dependencies": {
+    "cloudinary": "^1.25.2",
     "connect-mongo": "^4.4.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
@@ -19,6 +20,7 @@
     "moment": "^2.29.1",
     "mongoose": "^5.12.7",
     "morgan": "^1.10.0",
+    "multer": "^1.4.2",
     "passport": "^0.4.1",
     "passport-google-oauth20": "^2.0.0"
   },

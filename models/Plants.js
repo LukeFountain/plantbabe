@@ -12,6 +12,13 @@ const PlantSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  cloudinary_id: {
+    type: String,
+  },
+  imageurl: {
+    type: String,
+    default: null,
+  },
   status: {
     type: String,
     default: 'public',

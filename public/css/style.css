@@ -12,15 +12,30 @@ body {
   text-align: center;
 }
 
-.fa-small{
+.fa-small {
   font-size: 16px !important;
 }
 
-.btn-float{
+.btn-float {
   float: left;
   margin-right: 10px;
 }
 
 .img-small {
   width: 180px;
+}
+
+.materialboxed {
+  cursor: default !important;
+}
+
+.sidenav {
+  background-image: url("../images/sidenav3.jpg");
+  background-size: 300px;
+  background-repeat: repeat-y;
+}
+
+.sidenavarea > a {
+  font-size: 20px !important;
+  color: white !important;
 }

@@ -1,5 +1,8 @@
 const express = require("express");
 const router = express.Router();
+const cloudinary = require("../utils/cloudinary");
+const upload = require("../utils/multer");
+
 const { ensureAuth } = require("../middleware/auth");
 
 const Plants = require("../models/Plants");
@@ -12,10 +15,19 @@ router.get("/add", ensureAuth, (req, res) => {
 
 //this will process the add form
 //route POST /plants/add
-router.post("/", ensureAuth, async (req, res) => {
+router.post("/", ensureAuth, upload.single("img"), async (req, res) => {
+  
   try {
+    const cloudinaryResponse = await cloudinary.uploader.upload(req.file.path);
     req.body.user = req.user.id;
-    await Plants.create(req.body);
+    await Plants.create({
+      plantName: req.body.plantName,
+      body: req.body.body,
+      cloudinary_id: cloudinaryResponse.public_id,
+      imageurl: cloudinaryResponse.secure_url,
+      status: req.body.status,
+      user: req.user._id,
+    });
     res.redirect("/dashboard");
   } catch (err) {
     console.error(err);
@@ -138,22 +150,22 @@ router.delete("/:id", ensureAuth, async (req, res) => {
 
 // @desc    User plants
 // @route   GET /plants/user/:userId
-router.get('/user/:userId', ensureAuth, async (req, res) => {
+router.get("/user/:userId", ensureAuth, async (req, res) => {
   try {
     const plants = await Plants.find({
       user: req.params.userId,
-      status: 'public',
+      status: "public",
     })
-      .populate('user')
-      .lean()
+      .populate("user")
+      .lean();
 
-    res.render('plants/index', {
+    res.render("plants/index", {
       plants,
-    })
+    });
   } catch (err) {
-    console.error(err)
-    res.render('error/500')
+    console.error(err);
+    res.render("error/500");
   }
-})
+});
 
 module.exports = router;
