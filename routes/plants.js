@@ -16,7 +16,6 @@ router.get("/add", ensureAuth, (req, res) => {
 //this will process the add form
 //route POST /plants/add
 router.post("/", ensureAuth, upload.single("img"), async (req, res) => {
-  
   try {
     const cloudinaryResponse = await cloudinary.uploader.upload(req.file.path);
     req.body.user = req.user.id;
@@ -139,7 +138,10 @@ router.delete("/:id", ensureAuth, async (req, res) => {
     if (plants.user != req.user.id) {
       res.redirect("/plants");
     } else {
-      await Plants.remove({ _id: req.params.id });
+
+      await cloudinary.uploader.destroy(plants.cloudinary_id);
+      await Plants.findByIdAndDelete({ _id: req.params.id });
+
       res.redirect("/dashboard");
     }
   } catch (err) {
