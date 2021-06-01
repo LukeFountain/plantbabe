@@ -8,7 +8,7 @@
         </div>
         <div class="card-content center-align hoverable ">
           <h5>{{plantName}}</h5>
-          <p>{{stripTags (truncate body 150)}}</p>
+          <p>{{{stripTags (truncate body 25)}}}</p>
             <br>
             <a href="/plants/{{_id}}"><img class="materialboxed responsive-img" width="650" src={{imageurl}}></a>
             <div class="chip">
