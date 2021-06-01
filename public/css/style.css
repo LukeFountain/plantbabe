@@ -35,7 +35,41 @@ body {
   background-repeat: repeat-y;
 }
 
+.brand-logo center{
+  color:black;
+}
+
+.brand-logo{
+  color: black !important;
+  background-color: rgba(255,255,255,0.28) !important;
+}
+
+.topnav{
+  color: black;
+}
+
 .sidenavarea > a {
   font-size: 20px !important;
   color: white !important;
+}
+
+.header{
+  background-image: url('../images/topnav4withopacity.png');
+  background-size: 100px;
+  background-repeat: repeat-x;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+
+.fa-seedling{
+  color: black;
+  font-size: 69px !important;
 }
