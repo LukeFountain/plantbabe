@@ -1,24 +1,38 @@
 <h1>Shared Plants</h1>
-<div class="row">
+<div class="" id="gridselector">
   {{#each plants}}
     <div class="col s12 m4">
-      <div class="card">
+      <div class="imageParent hoverable ">
         <div class="card-image">
          {{{editIcon user ../user _id}}}
         </div>
-        <div class="card-content center-align hoverable ">
-          <h5>{{plantName}}</h5>
-          <p>{{{stripTags (truncate body 25)}}}</p>
-            <br>
-            <a href="/plants/{{_id}}"><img class="materialboxed responsive-img" width="650" src={{imageurl}}></a>
-            <div class="chip">
-                <img src="{{user.image}}" alt="" >
-                <a href="/plants/user/{{user._id}}">{{user.displayName}}</a>
-            </div>
+        <div class="plantCardTop">
+
+            <h5>{{plantName}}</h5>
+            <p>{{{stripTags (truncate body 55)}}}</p>
+              <br>
+              <div class='testStyle'>
+              {{!-- <a href="/plants/{{_id}}"> --}}
+              <img class=" "  src={{imageurl}}>
+              {{!-- </a> --}}
+              </div>
+              {{!-- //removed responsive-img rom the img class and materialboxed --}}
+           
         </div>
-        <div class="card-action center-align">
-            <a href="/plants/{{_id}}" class="btn grey">View More</a>
+        <div class="plantCardBottom">
+              <div class="chip">
+
+                <img src="{{user.image}}" alt="" class="imageclass">
+                
+                <a href="/plants/user/{{user._id}}" class="chiptext">{{user.displayName}}</a>
+                
+                 <div class="card-action center-align">
+                    <a href="/plants/{{_id}}" class="btn grey">View More</a>
+                 </div>
+             </div>
+
         </div>
+         
       </div>
     </div>
 

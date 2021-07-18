@@ -1,9 +1,37 @@
-p {
-  margin: 10px 0 !important;
+/* Box-sizing border-box */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+*, *:before, *:after {
+    box-sizing: inherit;
 }
+
+.body-container{
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.testStyle {
+  width: 100%;
+  height: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+}
+.testStyle img {
+  
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* p {
+  margin: 10px 0 !important;
+} */
 
 body {
   color: black;
+  margin-bottom: 100px;
 }
 
 .login-container {
@@ -35,16 +63,16 @@ body {
   background-repeat: repeat-y;
 }
 
-.brand-logo center{
-  color:black;
+.brand-logo center {
+  color: black;
 }
 
-.brand-logo{
+.brand-logo {
   color: black !important;
-  background-color: rgba(255,255,255,0.28) !important;
+  background-color: rgba(255, 255, 255, 0.28) !important;
 }
 
-.topnav{
+.topnav {
   color: black;
 }
 
@@ -53,8 +81,8 @@ body {
   color: white !important;
 }
 
-.header{
-  background-image: url('../images/topnav4withopacity.png');
+.header {
+  background-image: url("../images/topnav4withopacity.png");
   background-size: 100px;
   background-repeat: repeat-x;
 }
@@ -68,8 +96,101 @@ body {
   text-align: center;
 }
 
-
-.fa-seedling{
+.fa-seedling {
   color: black;
   font-size: 69px !important;
 }
+
+#gridselector {
+  display: grid;
+  grid-template-columns: 33fr 33fr 33fr;
+  gap: 3ch;
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+}
+
+.imageclass {
+  width: 100%;
+  height: 100%;
+}
+
+.bannerimage img {
+  width: 100%;
+  height: 100%;
+}
+
+.imageParent {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 600px;
+  border: 1px solid black;
+}
+
+.plantCardTop{
+  width: 350px;
+  height: 475px;
+}
+
+.plantCardTop img{
+
+}
+
+.plantCardTop h5,
+p {
+ text-align: center;
+}
+
+.plantCardTop h5  {
+  
+  margin: 0.5rem;;
+}
+
+.plantCardBottom{
+  height: 0%;
+  width: 60%;
+}
+
+.chip {
+  display: flex !important;
+  flex-direction: column;
+  margin: 2%;
+  text-align: center;
+  position: absolute;
+  width: 60%;
+  bottom: 7%;
+}
+
+.chiptext{
+  position: absolute;
+  top: 50%;
+  left: 53%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  /* inset: 0% 0% 0% 5%  ; */
+  /* padding-bottom: 5px; */
+}
+
+.card-action{
+  margin: 2%;
+  
+}
+
+.editBtn {
+  position: absolute;
+  right: -15px;
+  top: -15px;
+}
+
+
+ @media screen and (max-width: 600px) {
+  #gridselector {
+    
+    grid-template-columns: 33fr;
+    gap: 3ch;
+  }
+  }  
