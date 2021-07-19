@@ -55,6 +55,7 @@ body {
 
 .materialboxed {
   cursor: default !important;
+  width: 88px;
 }
 
 .sidenav {
