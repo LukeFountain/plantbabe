@@ -38,9 +38,14 @@
     <script> 
         M.Sidenav.init(document.querySelector('.sidenav'))   
         M.FormSelect.init(document.querySelector('#status'))   
-        CKEDITOR.replace('body', { 
+       {{!-- let editor = CKEDITOR.replace('body', { 
             plugins: 'wysiwygarea, toolbar, basicstyles, link'
         })
+        editor.on( 'required', function( evt ) {
+ 			alert( 'Article content is required.' );
+ 		evt.cancel();
+ 		} ); --}}
+
     </script>
 </body>
 
