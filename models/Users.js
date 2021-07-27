@@ -3,17 +3,17 @@ const mongoose = require("mongoose");
 const UserSchema = new mongoose.Schema({
   googleId: {
     type: String,
-    required: true,
+    required: false,
+  },
+  twitterId:{
+    type: String,
+    required: false,
   },
   displayName: {
     type: String,
-    required: true,
+    required: false,
   },
   firstName: {
-    type: String,
-    required: true,
-  },
-  lastName: {
     type: String,
     required: false,
   },

@@ -11,6 +11,7 @@ const session = require("express-session");
 const MongoDbStore = require("connect-mongo");
 const connectDB = require("./config/db");
 var multer  = require('multer')
+var Twitter = require('passport-twitter');
 
 
 //load the confin
@@ -23,6 +24,38 @@ require("./config/passport")(passport);
 connectDB();
 
 const app = express();
+
+
+//twitterAuth 
+//THIS WAS MESSING WITH PASSPORT
+
+
+// var client = new Twitter({
+//   consumer_key: 'process.env.TWITTER_API_KEY',
+//   consumer_secret: 'process.env.TWITTER_API_SECRET_KEY',
+//   access_token_key: 'process.env.TWITTER_ACCESS_TOKEN',
+//   access_token_secret: 'process.env.TWITTER_ACCESS_TOKEN_SECRET'
+// });
+ 
+// var params = {screen_name: 'nodejs'};
+// client.get('statuses/user_timeline', params, function(error, tweets, response) {
+//   if (!error) {
+//     console.log(tweets);
+//   }
+// });
+/*
+TypeError: OAuthStrategy requires a verify callback
+    at Strategy.OAuthStrategy (C:\Users\stlfo\Desktop\plantBabeApp\plantbabe\node_modules\passport-oauth1\lib\strategy.js:80:24)
+    at new Strategy (C:\Users\stlfo\Desktop\plantBabeApp\plantbabe\node_modules\passport-twitter\lib\strategy.js:53:17)
+    at Object.<anonymous> (C:\Users\stlfo\Desktop\plantBabeApp\plantbabe\app.js:33:14)
+       ^^^
+    //------------------------------------------------------------------------
+    //this is the actual place that the error was occuring
+    //------------------------------------------------------------------------
+*/
+
+
+
 
 // body parser
 app.use(express.urlencoded({ extended: false }));
