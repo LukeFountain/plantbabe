@@ -82,6 +82,15 @@ body {
   color: white !important;
 }
 
+.authPage{
+background-image: url("../images/AuthBackground.jpg");
+background-size:100%;
+background-repeat: no-repeat;
+background-position: center;
+
+}
+
+
 .header {
   background-image: url("../images/topnav4withopacity.png");
   background-size: 100px;
